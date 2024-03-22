@@ -108,14 +108,14 @@
             // GererMedecinItem
             // 
             this.GererMedecinItem.Name = "GererMedecinItem";
-            this.GererMedecinItem.Size = new System.Drawing.Size(224, 26);
+            this.GererMedecinItem.Size = new System.Drawing.Size(195, 26);
             this.GererMedecinItem.Text = "Gérer";
             this.GererMedecinItem.Click += new System.EventHandler(this.GererMedecinItem_Click);
             // 
             // dernierRapportToolStripMenuItem
             // 
             this.dernierRapportToolStripMenuItem.Name = "dernierRapportToolStripMenuItem";
-            this.dernierRapportToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dernierRapportToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.dernierRapportToolStripMenuItem.Text = "Dernier rapport";
             // 
             // visiteurToolStripMenuItem
@@ -168,7 +168,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
-            this.Text = "Form1";
+            this.Text = "GSB | Menu";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

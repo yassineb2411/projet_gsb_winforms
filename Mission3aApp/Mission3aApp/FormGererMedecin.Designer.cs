@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMedecin = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,23 +39,25 @@
             this.departementDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medecinClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBoxRecherche = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.buttonAjouter = new System.Windows.Forms.Button();
+            this.buttonSupprimer = new System.Windows.Forms.Button();
             this.comboBoxNom = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonEnregistrer = new System.Windows.Forms.Button();
             this.buttonRechercher = new System.Windows.Forms.Button();
             this.comboBoxDepartement = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedecin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medecinClassBindingSource)).BeginInit();
             this.groupBoxRecherche.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvMedecin
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvMedecin.AutoGenerateColumns = false;
+            this.dgvMedecin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMedecin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nomDataGridViewTextBoxColumn,
             this.prenomDataGridViewTextBoxColumn,
@@ -63,13 +65,13 @@
             this.telDataGridViewTextBoxColumn,
             this.specialiteComplementaireDataGridViewTextBoxColumn,
             this.departementDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.medecinClassBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 229);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(905, 251);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvMedecin.DataSource = this.medecinClassBindingSource;
+            this.dgvMedecin.Location = new System.Drawing.Point(32, 229);
+            this.dgvMedecin.Name = "dgvMedecin";
+            this.dgvMedecin.RowHeadersWidth = 51;
+            this.dgvMedecin.RowTemplate.Height = 24;
+            this.dgvMedecin.Size = new System.Drawing.Size(905, 251);
+            this.dgvMedecin.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -133,9 +135,11 @@
             // 
             // groupBoxRecherche
             // 
-            this.groupBoxRecherche.Controls.Add(this.button1);
+            this.groupBoxRecherche.Controls.Add(this.button4);
+            this.groupBoxRecherche.Controls.Add(this.buttonAjouter);
+            this.groupBoxRecherche.Controls.Add(this.buttonSupprimer);
             this.groupBoxRecherche.Controls.Add(this.comboBoxNom);
-            this.groupBoxRecherche.Controls.Add(this.button2);
+            this.groupBoxRecherche.Controls.Add(this.buttonEnregistrer);
             this.groupBoxRecherche.Controls.Add(this.buttonRechercher);
             this.groupBoxRecherche.Controls.Add(this.comboBoxDepartement);
             this.groupBoxRecherche.Controls.Add(this.label2);
@@ -147,14 +151,34 @@
             this.groupBoxRecherche.TabStop = false;
             this.groupBoxRecherche.Text = "Recherche";
             // 
-            // button1
+            // button4
             // 
-            this.button1.Location = new System.Drawing.Point(563, 117);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 35);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button4.Location = new System.Drawing.Point(608, 141);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(8, 8);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // buttonAjouter
+            // 
+            this.buttonAjouter.Location = new System.Drawing.Point(682, 76);
+            this.buttonAjouter.Name = "buttonAjouter";
+            this.buttonAjouter.Size = new System.Drawing.Size(154, 35);
+            this.buttonAjouter.TabIndex = 8;
+            this.buttonAjouter.Text = "Ajouter";
+            this.buttonAjouter.UseVisualStyleBackColor = true;
+            this.buttonAjouter.Click += new System.EventHandler(this.buttonAjouter_Click);
+            // 
+            // buttonSupprimer
+            // 
+            this.buttonSupprimer.Location = new System.Drawing.Point(682, 117);
+            this.buttonSupprimer.Name = "buttonSupprimer";
+            this.buttonSupprimer.Size = new System.Drawing.Size(154, 35);
+            this.buttonSupprimer.TabIndex = 7;
+            this.buttonSupprimer.Text = "Supprimer";
+            this.buttonSupprimer.UseVisualStyleBackColor = true;
+            this.buttonSupprimer.Click += new System.EventHandler(this.buttonSupprimer_Click);
             // 
             // comboBoxNom
             // 
@@ -165,18 +189,19 @@
             this.comboBoxNom.Size = new System.Drawing.Size(241, 24);
             this.comboBoxNom.TabIndex = 6;
             // 
-            // button2
+            // buttonEnregistrer
             // 
-            this.button2.Location = new System.Drawing.Point(563, 76);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(154, 35);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonEnregistrer.Location = new System.Drawing.Point(682, 36);
+            this.buttonEnregistrer.Name = "buttonEnregistrer";
+            this.buttonEnregistrer.Size = new System.Drawing.Size(154, 35);
+            this.buttonEnregistrer.TabIndex = 5;
+            this.buttonEnregistrer.Text = "Enregistrer";
+            this.buttonEnregistrer.UseVisualStyleBackColor = true;
+            this.buttonEnregistrer.Click += new System.EventHandler(this.buttonEnregistrer_Click);
             // 
             // buttonRechercher
             // 
-            this.buttonRechercher.Location = new System.Drawing.Point(563, 36);
+            this.buttonRechercher.Location = new System.Drawing.Point(448, 76);
             this.buttonRechercher.Name = "buttonRechercher";
             this.buttonRechercher.Size = new System.Drawing.Size(154, 35);
             this.buttonRechercher.TabIndex = 4;
@@ -216,10 +241,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(967, 508);
             this.Controls.Add(this.groupBoxRecherche);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvMedecin);
             this.Name = "FormGererMedecin";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "GSB | Gérer les médecins";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedecin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medecinClassBindingSource)).EndInit();
             this.groupBoxRecherche.ResumeLayout(false);
             this.groupBoxRecherche.PerformLayout();
@@ -229,7 +254,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMedecin;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prenomDataGridViewTextBoxColumn;
@@ -239,12 +264,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn departementDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource medecinClassBindingSource;
         private System.Windows.Forms.GroupBox groupBoxRecherche;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonEnregistrer;
         private System.Windows.Forms.Button buttonRechercher;
         private System.Windows.Forms.ComboBox comboBoxDepartement;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxNom;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonSupprimer;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonAjouter;
     }
 }
