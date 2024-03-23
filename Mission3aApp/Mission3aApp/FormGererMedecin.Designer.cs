@@ -48,6 +48,7 @@
             this.comboBoxDepartement = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonActualiser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedecin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medecinClassBindingSource)).BeginInit();
             this.groupBoxRecherche.SuspendLayout();
@@ -135,6 +136,7 @@
             // 
             // groupBoxRecherche
             // 
+            this.groupBoxRecherche.Controls.Add(this.buttonActualiser);
             this.groupBoxRecherche.Controls.Add(this.button4);
             this.groupBoxRecherche.Controls.Add(this.buttonAjouter);
             this.groupBoxRecherche.Controls.Add(this.buttonSupprimer);
@@ -201,7 +203,7 @@
             // 
             // buttonRechercher
             // 
-            this.buttonRechercher.Location = new System.Drawing.Point(448, 76);
+            this.buttonRechercher.Location = new System.Drawing.Point(453, 36);
             this.buttonRechercher.Name = "buttonRechercher";
             this.buttonRechercher.Size = new System.Drawing.Size(154, 35);
             this.buttonRechercher.TabIndex = 4;
@@ -234,6 +236,16 @@
             this.label1.Size = new System.Drawing.Size(42, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nom :";
+            // 
+            // buttonActualiser
+            // 
+            this.buttonActualiser.Location = new System.Drawing.Point(453, 117);
+            this.buttonActualiser.Name = "buttonActualiser";
+            this.buttonActualiser.Size = new System.Drawing.Size(154, 35);
+            this.buttonActualiser.TabIndex = 10;
+            this.buttonActualiser.Text = "Actualiser";
+            this.buttonActualiser.UseVisualStyleBackColor = true;
+            this.buttonActualiser.Click += new System.EventHandler(this.buttonActualiser_Click);
             // 
             // FormGererMedecin
             // 
@@ -273,5 +285,6 @@
         private System.Windows.Forms.Button buttonSupprimer;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button buttonAjouter;
+        private System.Windows.Forms.Button buttonActualiser;
     }
 }

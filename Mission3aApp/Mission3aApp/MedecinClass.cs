@@ -15,7 +15,5 @@ namespace Mission3aApp
         public int tel { get; set; }
         public string specialiteComplementaire { get; set; }
         public int departement { get; set; }
-
-
     }
 }

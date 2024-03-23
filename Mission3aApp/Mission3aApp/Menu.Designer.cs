@@ -36,7 +36,7 @@
             this.listeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.médecinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GererMedecinItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dernierRapportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DernierRapportItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visiteurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gérerToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.rapportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,7 +100,7 @@
             // 
             this.médecinToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.GererMedecinItem,
-            this.dernierRapportToolStripMenuItem});
+            this.DernierRapportItem});
             this.médecinToolStripMenuItem.Name = "médecinToolStripMenuItem";
             this.médecinToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.médecinToolStripMenuItem.Text = "Médecin";
@@ -108,15 +108,16 @@
             // GererMedecinItem
             // 
             this.GererMedecinItem.Name = "GererMedecinItem";
-            this.GererMedecinItem.Size = new System.Drawing.Size(195, 26);
+            this.GererMedecinItem.Size = new System.Drawing.Size(224, 26);
             this.GererMedecinItem.Text = "Gérer";
             this.GererMedecinItem.Click += new System.EventHandler(this.GererMedecinItem_Click);
             // 
-            // dernierRapportToolStripMenuItem
+            // DernierRapportItem
             // 
-            this.dernierRapportToolStripMenuItem.Name = "dernierRapportToolStripMenuItem";
-            this.dernierRapportToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.dernierRapportToolStripMenuItem.Text = "Dernier rapport";
+            this.DernierRapportItem.Name = "DernierRapportItem";
+            this.DernierRapportItem.Size = new System.Drawing.Size(224, 26);
+            this.DernierRapportItem.Text = "Dernier rapport";
+            this.DernierRapportItem.Click += new System.EventHandler(this.DernierRapportItem_Click);
             // 
             // visiteurToolStripMenuItem
             // 
@@ -186,7 +187,7 @@
         private System.Windows.Forms.ToolStripMenuItem listeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem médecinToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem GererMedecinItem;
-        private System.Windows.Forms.ToolStripMenuItem dernierRapportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DernierRapportItem;
         private System.Windows.Forms.ToolStripMenuItem visiteurToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gérerToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem rapportsToolStripMenuItem;

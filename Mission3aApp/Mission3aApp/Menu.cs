@@ -20,9 +20,13 @@ namespace Mission3aApp
         private void GererMedecinItem_Click(object sender, EventArgs e)
         {
             FormGererMedecin formGererMedecin = new FormGererMedecin();
-
-            // Afficher le formulaire
             formGererMedecin.Show();
+        }
+
+        private void DernierRapportItem_Click(object sender, EventArgs e)
+        {
+            FormDernierRapport formDernierRapport = new FormDernierRapport();
+            formDernierRapport.Show();
         }
     }
 }

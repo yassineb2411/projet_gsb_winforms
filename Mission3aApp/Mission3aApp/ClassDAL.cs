@@ -136,5 +136,15 @@ namespace Mission3aApp
 
             return reportCount;
         }
+
+        public static IList<RapportClass> GetAllRapports()
+        {
+            using (IDbConnection db = new SqlConnection(SqlConnectionClass.ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<RapportClass>("Rapport_GetAll", commandType: CommandType.StoredProcedure).ToList();
+            }
+        }
     }
 }

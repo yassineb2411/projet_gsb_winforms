@@ -104,6 +104,7 @@ namespace Mission3aApp
             {
                 ClassDAL.AddMedecin(newId, nom, prenom, adresse, tel, specialiteComplementaire, departement);
                 MessageBox.Show("Médecin ajouté avec succès !");
+                this.Close();
             }
             catch (Exception ex)
             {

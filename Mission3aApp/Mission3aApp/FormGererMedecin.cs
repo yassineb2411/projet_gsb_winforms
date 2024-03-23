@@ -90,7 +90,8 @@ namespace Mission3aApp
                     }
                 }
 
-                MessageBox.Show("Modifications enregistrées avec succès !");
+            MessageBox.Show("Modifications enregistrées avec succès !");
+            ActualiserDonnees();
         }
 
         private void buttonAjouter_Click(object sender, EventArgs e)
@@ -115,12 +116,23 @@ namespace Mission3aApp
                 {
                     ClassDAL.DeleteMedecin(id);
                     MessageBox.Show("Médecin supprimé avec succès !");
+                    ActualiserDonnees();
                 }
             }
             else
             {
                 MessageBox.Show("Veuillez sélectionner un médecin à supprimer.");
             }
+        }
+
+        private void ActualiserDonnees()
+        {
+            medecinClassBindingSource.DataSource = ClassDAL.GetAll();
+        }
+
+        private void buttonActualiser_Click(object sender, EventArgs e)
+        {
+            ActualiserDonnees();
         }
     }
 }
